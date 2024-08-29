@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-business-lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/daniel-logo.png" alt="logo"></a>
+        
+        <nav>
+            <div class="menu_icon_box">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul>
+                <li><a href="#home1" class="active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner" id="home1">
+        <img src="img/banner.png" alt="banner">
+    </div>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Chief Daniel's Restaurant</h1>
+            <p>We offer the best culinary experiences with a variety of dishes crafted with love and precision.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="img/burger.png" alt="burger">
+                    <h3>Dish 1</h3>
+                    <p>Description: Yummy Burger</p>
+                </div>
+                <div class="dish">
+                    <img src="img/pork-adobo.png" alt="pork-adobo">
+                    <h3>Dish 2</h3>
+                    <p>Description: Yummy Pork Adobo</p>
+                </div>
+                <div class="dish">
+                    <img src="img/chicken-inasal.png" alt="chicken-inasal">
+                    <h3>Dish 3</h3>
+                    <p>Description: Yummy Chicken Inasal</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="branches">
+            <h2>Our Branches</h2>
+            <div class="branches">
+                <div class="branch">
+                    <h3>San Pedro</h3>
+                    <p>Branch 1 DVO</p>
+                </div>
+                <div class="branch">
+                    <h3>Calinan</h3>
+                    <p>Branch 2 DVO</p>
+                </div>
+                <div class="branch">
+                    <h3>Catalunan Grande</h3>
+                    <p>Branch 3 DVO</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: danielsrestaurant@gmail.com</p>
+            <p>Phone: (+6394) 657-67634</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Business Lab, Daniel's Restaurant. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+        const menuIconBox = document.querySelector('.menu_icon_box');
+        const navMenu = document.querySelector('nav ul');
+
+        menuIconBox.addEventListener('click', () => {
+            menuIconBox.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Remove 'active' class from the menu and icon when a link is clicked
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuIconBox.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
